@@ -1,0 +1,19 @@
+# calculadora básica con leer
+algoritmo calculadora
+  escribir "primer número:"
+  leer a
+  escribir "segundo número:"
+  leer b
+
+  variable num_a = a_numero(a)
+  variable num_b = a_numero(b)
+
+  escribir "suma: ", num_a + num_b
+  escribir "resta: ", num_a - num_b
+  escribir "multiplicación: ", num_a * num_b
+  si num_b != 0
+    escribir "división: ", num_a / num_b
+  sino
+    escribir "no se puede dividir entre cero"
+  fin si
+fin algoritmo

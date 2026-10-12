@@ -1,0 +1,26 @@
+# juego de adivinar
+algoritmo adivinar
+  variable secreto = aleatorio(1, 20)
+  variable intentos = 0
+  variable adivinado = falso
+
+  escribir "adivina el número entre 1 y 20"
+
+  mientras no adivinado
+    escribir "tu intento:"
+    leer entrada
+    variable numero = a_numero(entrada)
+    intentos = intentos + 1
+
+    si numero == secreto entonces
+      escribir "¡correcto! lo lograste en ", intentos, " intentos"
+      adivinado = verdadero
+    sino
+      si numero < secreto
+        escribir "el número es más alto"
+      sino
+        escribir "el número es más bajo"
+      fin si
+    fin si
+  fin mientras
+fin algoritmo

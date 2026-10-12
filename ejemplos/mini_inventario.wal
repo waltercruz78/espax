@@ -1,0 +1,41 @@
+# mini inventario: clases + patrones + nativas
+
+clase producto
+  funcion iniciar(nombre, precio, cantidad)
+    esto.nombre = nombre
+    esto.precio = precio
+    esto.cantidad = cantidad
+  fin funcion
+
+  funcion valor_total()
+    retornar esto.precio * esto.cantidad
+  fin funcion
+
+  funcion mostrar()
+    escribir esto.nombre, " | precio: ", esto.precio, " | cantidad: ", esto.cantidad, " | total: ", esto.valor_total()
+  fin funcion
+fin clase
+
+patron total_inventario con productos
+  variable total = 0
+  para cada p en productos
+    total = total + p.valor_total()
+  fin para
+  retornar total
+fin patron
+
+algoritmo inventario
+  variable p1 = nuevo producto("manzanas", 2, 10)
+  variable p2 = nuevo producto("panes", 3, 5)
+  variable p3 = nuevo producto("leches", 1.5, 8)
+
+  variable productos = [p1, p2, p3]
+
+  escribir "=== inventario ==="
+  para cada p en productos
+    p.mostrar()
+  fin para
+
+  escribir ""
+  escribir "valor total: ", patron total_inventario con productos
+fin algoritmo

@@ -1,0 +1,12 @@
+# promedio de varias notas
+algoritmo promedio
+  variable notas = [7, 8, 6, 9, 5]
+
+  escribir "notas: ", notas
+  escribir "cantidad: ", longitud(notas)
+  escribir "suma: ", suma(notas)
+  escribir "promedio: ", promedio(notas)
+  escribir "mayor: ", maximo(notas)
+  escribir "menor: ", minimo(notas)
+  escribir "ordenadas: ", ordenar(notas)
+fin algoritmo

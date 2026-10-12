@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# Entornos virtuales
+venv/
+env/
+ENV/
+.venv/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Temporales del proyecto
+salida.txt
+lineas.txt
+productos.csv
+resultados/
+*.log
+
+# Archivos de prueba (no son parte del proyecto)
+p1.wal
+p2.wal
+p3.wal
+p4.wal
+p5.wal
+p6.wal
+p7.wal
+p8.wal
+nat1.wal
+nat2.wal
+prueba.wal
+patron1.wal
+mate.wal
+saludo.wal
+usar_modulos.wal
+funciones_valor.wal
+reporte.wal
+fase3.wal
+datos.csv
+original.txt
+copia.txt
+renombrado.txtprobar_nativas.py
+probar_nativas.py
+espa/CHANGELOG.md.txt
+espa/pyproject.toml.txt
+vscode-espa/README.md.txt

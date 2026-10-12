@@ -1,0 +1,239 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Espa+",
+  "scopeName": "source.espa",
+  "fileTypes": [".wal"],
+  "patterns": [
+    { "include": "#comentarios" },
+    { "include": "#textos" },
+    { "include": "#numeros" },
+    { "include": "#palabras-clave-control" },
+    { "include": "#palabras-clave-declaracion" },
+    { "include": "#palabras-clave-valor" },
+    { "include": "#palabras-clave-error" },
+    { "include": "#palabras-clave-modulo" },
+    { "include": "#palabras-clave-objeto" },
+    { "include": "#palabras-clave-cierre" },
+    { "include": "#funciones-nativas" },
+    { "include": "#operadores" },
+    { "include": "#llamadas" },
+    { "include": "#identificadores" }
+  ],
+  "repository": {
+
+    "comentarios": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.espa",
+          "begin": "#",
+          "end": "$"
+        },
+        {
+          "name": "comment.block.espa",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+
+    "textos": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.espa",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.espa",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+
+    "numeros": {
+      "patterns": [
+        {
+          "name": "constant.numeric.float.espa",
+          "match": "\\b\\d+\\.\\d+\\b"
+        },
+        {
+          "name": "constant.numeric.integer.espa",
+          "match": "\\b\\d+\\b"
+        }
+      ]
+    },
+
+    "palabras-clave-control": {
+      "patterns": [
+        {
+          "name": "keyword.control.espa",
+          "match": "\\b(si|sino|segun|mientras|para|cada|en|desde|hasta|paso|hacer|entonces|caso|defecto)\\b"
+        }
+      ]
+    },
+
+    "palabras-clave-declaracion": {
+      "patterns": [
+        {
+          "name": "storage.type.espa",
+          "match": "\\b(variable|constante|funcion|patron|clase)\\b"
+        },
+        {
+          "name": "keyword.other.espa",
+          "match": "\\b(con)\\b"
+        }
+      ]
+    },
+
+    "palabras-clave-valor": {
+      "patterns": [
+        {
+          "name": "constant.language.espa",
+          "match": "\\b(verdadero|falso|nulo)\\b"
+        },
+        {
+          "name": "variable.language.espa",
+          "match": "\\b(esto)\\b"
+        }
+      ]
+    },
+
+    "palabras-clave-error": {
+      "patterns": [
+        {
+          "name": "keyword.control.exception.espa",
+          "match": "\\b(intentar|capturar|finalmente|lanzar)\\b"
+        }
+      ]
+    },
+
+    "palabras-clave-modulo": {
+      "patterns": [
+        {
+          "name": "keyword.control.import.espa",
+          "match": "\\b(importar|paquete)\\b"
+        }
+      ]
+    },
+
+    "palabras-clave-objeto": {
+      "patterns": [
+        {
+          "name": "keyword.operator.new.espa",
+          "match": "\\b(nuevo|herea)\\b"
+        },
+        {
+          "name": "keyword.other.async.espa",
+          "match": "\\b(asincrono|esperar)\\b"
+        }
+      ]
+    },
+
+    "palabras-clave-cierre": {
+      "patterns": [
+        {
+          "name": "keyword.control.close.espa",
+          "match": "\\bfin\\b"
+        },
+        {
+          "name": "keyword.control.open.espa",
+          "match": "\\balgoritmo\\b"
+        }
+      ]
+    },
+
+    "funciones-nativas": {
+      "patterns": [
+        {
+          "name": "support.function.text.espa",
+          "match": "\\b(longitud|mayus|minus|capitalizar|recortar|reemplazar|contiene|empieza|termina|separar|unir|cortar|repetir_texto|al_reves|contar_palabras|indice_texto)\\b(?=\\s*\\()"
+        },
+        {
+          "name": "support.function.math.espa",
+          "match": "\\b(absoluto|signo|redondear|techo|piso|raiz|potencia|maximo|minimo|suma|promedio|aleatorio|decimal_aleatorio|entre|es_primo|factorial|fibonacci)\\b(?=\\s*\\()"
+        },
+        {
+          "name": "support.function.list.espa",
+          "match": "\\b(agregar|quitar|insertar|ordenar|invertir|repetir|rango|filtrar|mapear|reducir|buscar|contar|indice|primeros|ultimos|unicos|vacio|lleno|concatenar)\\b(?=\\s*\\()"
+        },
+        {
+          "name": "support.function.conversion.espa",
+          "match": "\\b(a_texto|a_numero|a_logico)\\b(?=\\s*\\()"
+        },
+        {
+          "name": "support.function.system.espa",
+          "match": "\\b(tiempo|tipo|copiar|claves|valores)\\b(?=\\s*\\()"
+        },
+        {
+          "name": "support.function.file.espa",
+          "match": "\\b(leer_archivo|escribir_archivo|agregar_archivo|existe_archivo|borrar_archivo|listar_archivos|crear_carpeta|existe_carpeta|leer_lineas|escribir_lineas|mover_archivo|copiar_archivo|renombrar_archivo|borrar_carpeta|ruta_absoluta|carpeta_actual|listar_todo|es_carpeta)\\b(?=\\s*\\()"
+        },
+        {
+          "name": "support.function.csv.espa",
+          "match": "\\b(separar_csv|unir_csv)\\b(?=\\s*\\()"
+        },
+        {
+          "name": "support.function.io.espa",
+          "match": "\\b(pedir|pedir_numero|pedir_logico)\\b(?=\\s*\\()"
+        },
+        {
+          "name": "support.function.os.espa",
+          "match": "\\b(salir|variable_entorno|dormir|ejecutar_comando)\\b(?=\\s*\\()"
+        },
+        {
+          "name": "support.function.io.espa",
+          "match": "\\b(escribir|leer)\\b"
+        }
+      ]
+    },
+
+    "operadores": {
+      "patterns": [
+        {
+          "name": "keyword.operator.logical.espa",
+          "match": "\\b(y|o|no)\\b"
+        },
+        {
+          "name": "keyword.operator.modulo.espa",
+          "match": "\\bresiduo\\b"
+        },
+        {
+          "name": "keyword.operator.comparison.espa",
+          "match": "==|!=|<=|>=|<|>"
+        },
+        {
+          "name": "keyword.operator.compound.espa",
+          "match": "\\+=|-=|\\*=|/=|\\*\\*="
+        },
+        {
+          "name": "keyword.operator.arithmetic.espa",
+          "match": "\\*\\*|\\+|-|\\*|/|=|\\+"
+        },
+        {
+          "name": "punctuation.espa",
+          "match": "\\(|\\)|\\[|\\]|\\{|\\}|,|:|\\."
+        }
+      ]
+    },
+
+    "llamadas": {
+      "patterns": [
+        {
+          "name": "entity.name.function.espa",
+          "match": "\\b[a-záéíóúñ][a-z0-9áéíóúñ_]*\\b(?=\\s*\\()"
+        }
+      ]
+    },
+
+    "identificadores": {
+      "patterns": [
+        {
+          "name": "variable.other.espa",
+          "match": "\\b[a-záéíóúñ][a-z0-9áéíóúñ_]*\\b"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+# sello único de espa+: patrón reutilizable
+
+patron sumar_lista con lista
+  variable total = 0
+  para cada x en lista
+    total = total + x
+  fin para
+  retornar total
+fin patron
+
+patron encontrar_mayor con lista
+  variable mayor = lista[0]
+  para cada x en lista
+    si x > mayor
+      mayor = x
+    fin si
+  fin para
+  retornar mayor
+fin patron
+
+algoritmo principal
+  variable a = [3, 7, 2, 9, 1]
+  variable b = [15, 22, 8, 14]
+
+  escribir "suma de a: ", patron sumar_lista con a
+  escribir "suma de b: ", patron sumar_lista con b
+  escribir "mayor de a: ", patron encontrar_mayor con a
+  escribir "mayor de b: ", patron encontrar_mayor con b
+fin algoritmo

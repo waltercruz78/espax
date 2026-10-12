@@ -1,0 +1,58 @@
+{
+  "name": "espa-plus",
+  "displayName": "Espa+",
+  "description": "Resaltado de sintaxis, snippets y configuración para el lenguaje Espa+",
+  "version": "0.4.0",
+  "publisher": "espax",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "keywords": [
+    "espa+",
+    "espanol",
+    "pseudocodigo",
+    "educacion",
+    "wal"
+  ],
+  "icon": "icons/espa.png",
+  "galleryBanner": {
+    "color": "#1e40af",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TU_USUARIO/espax"
+  },
+  "license": "MIT",
+  "contributes": {
+    "languages": [
+      {
+        "id": "espa",
+        "aliases": ["Espa+", "espa", "wal"],
+        "extensions": [".wal"],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/espa.png",
+          "dark": "./icons/espa.png"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "espa",
+        "scopeName": "source.espa",
+        "path": "./syntaxes/espa.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "espa",
+        "path": "./snippets/espa.json"
+      }
+    ]
+  }
+}

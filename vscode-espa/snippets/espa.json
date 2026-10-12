@@ -1,0 +1,233 @@
+{
+  "Algoritmo": {
+    "prefix": "algoritmo",
+    "body": [
+      "algoritmo ${1:nombre}",
+      "\t$0",
+      "fin algoritmo"
+    ],
+    "description": "Bloque algoritmo"
+  },
+  "Funcion": {
+    "prefix": "funcion",
+    "body": [
+      "funcion ${1:nombre}(${2:parametros})",
+      "\t$0",
+      "fin funcion"
+    ],
+    "description": "Definir una función"
+  },
+  "Patron": {
+    "prefix": "patron",
+    "body": [
+      "patron ${1:nombre} con ${2:datos}",
+      "\t$0",
+      "fin patron"
+    ],
+    "description": "Definir un patrón (sello único de Espa+)"
+  },
+  "Clase": {
+    "prefix": "clase",
+    "body": [
+      "clase ${1:Nombre}",
+      "\tfuncion iniciar(${2:parametros})",
+      "\t\t$0",
+      "\tfin funcion",
+      "fin clase"
+    ],
+    "description": "Definir una clase con constructor"
+  },
+  "Si": {
+    "prefix": "si",
+    "body": [
+      "si ${1:condicion} entonces",
+      "\t$0",
+      "fin si"
+    ],
+    "description": "Bloque si"
+  },
+  "Si / Sino": {
+    "prefix": "sisino",
+    "body": [
+      "si ${1:condicion} entonces",
+      "\t$2",
+      "sino",
+      "\t$0",
+      "fin si"
+    ],
+    "description": "Bloque si/sino"
+  },
+  "Segun": {
+    "prefix": "segun",
+    "body": [
+      "segun ${1:valor}",
+      "\tcaso ${2:1}",
+      "\t\t$3",
+      "\tdefecto",
+      "\t\t$0",
+      "fin segun"
+    ],
+    "description": "Elección múltiple"
+  },
+  "Mientras": {
+    "prefix": "mientras",
+    "body": [
+      "mientras ${1:condicion} hacer",
+      "\t$0",
+      "fin mientras"
+    ],
+    "description": "Bucle mientras"
+  },
+  "Para cada": {
+    "prefix": "paracada",
+    "body": [
+      "para cada ${1:x} en ${2:lista}",
+      "\t$0",
+      "fin para"
+    ],
+    "description": "Bucle para cada"
+  },
+  "Para desde hasta": {
+    "prefix": "paradesde",
+    "body": [
+      "para ${1:i} desde ${2:0} hasta ${3:10}",
+      "\t$0",
+      "fin para"
+    ],
+    "description": "Bucle numérico"
+  },
+  "Para con paso": {
+    "prefix": "parapaso",
+    "body": [
+      "para ${1:i} desde ${2:0} hasta ${3:10} paso ${4:2}",
+      "\t$0",
+      "fin para"
+    ],
+    "description": "Bucle numérico con paso"
+  },
+  "Intentar / Capturar": {
+    "prefix": "intentar",
+    "body": [
+      "intentar",
+      "\t${1}",
+      "capturar ${2:error}",
+      "\t$0",
+      "fin intentar"
+    ],
+    "description": "Bloque intentar/capturar"
+  },
+  "Intentar / Capturar / Finalmente": {
+    "prefix": "intentarfinal",
+    "body": [
+      "intentar",
+      "\t${1}",
+      "capturar ${2:error}",
+      "\t${3}",
+      "finalmente",
+      "\t$0",
+      "fin intentar"
+    ],
+    "description": "Bloque intentar/capturar/finalmente"
+  },
+  "Variable": {
+    "prefix": "variable",
+    "body": [
+      "variable ${1:x} = ${2:0}"
+    ],
+    "description": "Declarar variable"
+  },
+  "Constante": {
+    "prefix": "constante",
+    "body": [
+      "constante ${1:NOMBRE} = ${2:valor}"
+    ],
+    "description": "Declarar constante"
+  },
+  "Escribir": {
+    "prefix": "escribir",
+    "body": [
+      "escribir \"${1:texto}\""
+    ],
+    "description": "Imprimir"
+  },
+  "Leer": {
+    "prefix": "leer",
+    "body": [
+      "leer ${1:variable}"
+    ],
+    "description": "Leer entrada"
+  },
+  "Retornar": {
+    "prefix": "retornar",
+    "body": [
+      "retornar ${1:valor}"
+    ],
+    "description": "Retornar de una función"
+  },
+  "Importar": {
+    "prefix": "importar",
+    "body": [
+      "importar ${1:modulo}"
+    ],
+    "description": "Importar un módulo"
+  },
+  "Paquete": {
+    "prefix": "paquete",
+    "body": [
+      "paquete ${1:nombre}"
+    ],
+    "description": "Definir el paquete"
+  },
+  "Comentario de línea": {
+    "prefix": "#",
+    "body": [
+      "# ${1:comentario}"
+    ],
+    "description": "Comentario de una línea"
+  },
+  "Comentario de bloque": {
+    "prefix": "/*",
+    "body": [
+      "/*",
+      "\t${1:comentario}",
+      "\t$0",
+      "*/"
+    ],
+    "description": "Comentario de varias líneas"
+  },
+  "Nuevo objeto": {
+    "prefix": "nuevo",
+    "body": [
+      "nuevo ${1:Clase}(${2:argumentos})"
+    ],
+    "description": "Crear objeto"
+  },
+  "Pedir número": {
+    "prefix": "pedirn",
+    "body": [
+      "variable ${1:n} = pedir_numero(\"${2:ingresa un número: }\")"
+    ],
+    "description": "Pedir un número al usuario"
+  },
+  "Pedir texto": {
+    "prefix": "pedirt",
+    "body": [
+      "variable ${1:t} = pedir(\"${2:ingresa un texto: }\")"
+    ],
+    "description": "Pedir un texto al usuario"
+  },
+  "Leer archivo": {
+    "prefix": "leerarch",
+    "body": [
+      "variable ${1:contenido} = leer_archivo(\"${2:datos.txt}\")"
+    ],
+    "description": "Leer un archivo"
+  },
+  "Escribir archivo": {
+    "prefix": "escribirarch",
+    "body": [
+      "escribir_archivo(\"${1:datos.txt}\", ${2:contenido})"
+    ],
+    "description": "Escribir un archivo"
+  }
+}

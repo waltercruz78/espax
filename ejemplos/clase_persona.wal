@@ -1,0 +1,27 @@
+# clases y objetos
+clase persona
+  funcion iniciar(nombre, edad)
+    esto.nombre = nombre
+    esto.edad = edad
+  fin funcion
+
+  funcion saludar()
+    escribir "hola, soy ", esto.nombre, " y tengo ", esto.edad, " años"
+  fin funcion
+
+  funcion cumplir_anios()
+    esto.edad = esto.edad + 1
+    escribir esto.nombre, " ahora tiene ", esto.edad, " años"
+  fin funcion
+fin clase
+
+algoritmo principal
+  variable ana = nuevo persona("ana", 25)
+  variable luis = nuevo persona("luis", 30)
+
+  ana.saludar()
+  luis.saludar()
+
+  ana.cumplir_anios()
+  luis.cumplir_anios()
+fin algoritmo

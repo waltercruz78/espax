@@ -1,0 +1,5 @@
+# programa más simple de espa+
+algoritmo hola
+  escribir "hola, mundo"
+  escribir "esto es espa+"
+fin algoritmo

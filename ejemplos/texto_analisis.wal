@@ -1,0 +1,17 @@
+# análisis de texto con funciones nativas
+algoritmo analizar
+  variable frase = "Espa+ es un lenguaje en español"
+
+  escribir "original: ", frase
+  escribir "mayúsculas: ", mayus(frase)
+  escribir "minúsculas: ", minus(frase)
+  escribir "longitud: ", longitud(frase)
+  escribir "contiene 'español': ", contiene(frase, "español")
+  escribir "empieza con 'Espa': ", empieza(frase, "Espa")
+  escribir "termina con 'español': ", termina(frase, "español")
+  escribir "reemplazo: ", reemplazar(frase, "español", "castellano")
+
+  variable palabras = separar(frase, " ")
+  escribir "palabras: ", palabras
+  escribir "cantidad de palabras: ", longitud(palabras)
+fin algoritmo

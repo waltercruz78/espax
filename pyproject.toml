@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "espa-plus"
+version = "0.4.0"
+description = "Lenguaje de programación en español basado en pseudocódigo ejecutable"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Espa+ contributors" },
+]
+keywords = ["español", "spanish", "pseudocodigo", "lenguaje", "educacion"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Spanish",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Education",
+    "Topic :: Software Development :: Interpreters",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
+
+[project.scripts]
+corre = "espa.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/TU_USUARIO/espax"
+Repository = "https://github.com/TU_USUARIO/espax"
+Issues = "https://github.com/TU_USUARIO/espax/issues"
+
+[tool.setuptools]
+packages = ["espa"]
+package-dir = { "" = "." }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
